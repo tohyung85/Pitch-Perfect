@@ -60,8 +60,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="1sH-GK-PmZ" secondAttribute="centerX" id="bE5-gC-aFX"/>
-                            <constraint firstAttribute="centerY" secondItem="1sH-GK-PmZ" secondAttribute="centerY" constant="-99.5" id="tKY-3b-2tj"/>
+                            <constraint firstItem="1sH-GK-PmZ" firstAttribute="top" secondItem="dnc-QD-Imi" secondAttribute="bottom" constant="39" id="eiI-Gx-ubv"/>
+                            <constraint firstAttribute="centerX" secondItem="1sH-GK-PmZ" secondAttribute="centerX" id="jOy-Xr-1H1"/>
                             <constraint firstAttribute="centerY" secondItem="dnc-QD-Imi" secondAttribute="centerY" id="vor-at-pdM"/>
                             <constraint firstAttribute="centerX" secondItem="dnc-QD-Imi" secondAttribute="centerX" id="xUS-Qc-PDU"/>
                         </constraints>
@@ -71,10 +71,10 @@
                                 <exclude reference="1sH-GK-PmZ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="bE5-gC-aFX"/>
-                                <exclude reference="tKY-3b-2tj"/>
                                 <exclude reference="vor-at-pdM"/>
                                 <exclude reference="xUS-Qc-PDU"/>
+                                <exclude reference="eiI-Gx-ubv"/>
+                                <exclude reference="jOy-Xr-1H1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -83,10 +83,10 @@
                                 <include reference="1sH-GK-PmZ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="bE5-gC-aFX"/>
-                                <include reference="tKY-3b-2tj"/>
                                 <include reference="vor-at-pdM"/>
                                 <include reference="xUS-Qc-PDU"/>
+                                <include reference="eiI-Gx-ubv"/>
+                                <include reference="jOy-Xr-1H1"/>
                             </mask>
                         </variation>
                     </view>
