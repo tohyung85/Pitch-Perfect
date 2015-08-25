@@ -57,11 +57,22 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWq-tk-PiD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IBc-zM-0ax"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="IWq-tk-PiD" secondAttribute="centerX" constant="-2" id="U4i-ep-zBC"/>
                             <constraint firstItem="1sH-GK-PmZ" firstAttribute="top" secondItem="dnc-QD-Imi" secondAttribute="bottom" constant="39" id="eiI-Gx-ubv"/>
                             <constraint firstAttribute="centerX" secondItem="1sH-GK-PmZ" secondAttribute="centerX" id="jOy-Xr-1H1"/>
+                            <constraint firstItem="IWq-tk-PiD" firstAttribute="top" secondItem="1sH-GK-PmZ" secondAttribute="bottom" constant="36" id="t6g-VL-unn"/>
                             <constraint firstAttribute="centerY" secondItem="dnc-QD-Imi" secondAttribute="centerY" id="vor-at-pdM"/>
                             <constraint firstAttribute="centerX" secondItem="dnc-QD-Imi" secondAttribute="centerX" id="xUS-Qc-PDU"/>
                         </constraints>
@@ -69,24 +80,30 @@
                             <mask key="subviews">
                                 <exclude reference="dnc-QD-Imi"/>
                                 <exclude reference="1sH-GK-PmZ"/>
+                                <exclude reference="IWq-tk-PiD"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="vor-at-pdM"/>
                                 <exclude reference="xUS-Qc-PDU"/>
                                 <exclude reference="eiI-Gx-ubv"/>
                                 <exclude reference="jOy-Xr-1H1"/>
+                                <exclude reference="U4i-ep-zBC"/>
+                                <exclude reference="t6g-VL-unn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="dnc-QD-Imi"/>
                                 <include reference="1sH-GK-PmZ"/>
+                                <include reference="IWq-tk-PiD"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="vor-at-pdM"/>
                                 <include reference="xUS-Qc-PDU"/>
                                 <include reference="eiI-Gx-ubv"/>
                                 <include reference="jOy-Xr-1H1"/>
+                                <include reference="U4i-ep-zBC"/>
+                                <include reference="t6g-VL-unn"/>
                             </mask>
                         </variation>
                     </view>
@@ -101,5 +118,6 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="stopButton" width="50" height="50"/>
     </resources>
 </document>
