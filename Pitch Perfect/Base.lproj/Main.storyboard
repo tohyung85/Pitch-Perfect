@@ -109,11 +109,12 @@
                     </view>
                     <connections>
                         <outlet property="recordInProcess" destination="1sH-GK-PmZ" id="Doh-re-2YY"/>
+                        <outlet property="stopButton" destination="IWq-tk-PiD" id="17M-BN-fM9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="346"/>
+            <point key="canvasLocation" x="-34.5" y="285"/>
         </scene>
     </scenes>
     <resources>
