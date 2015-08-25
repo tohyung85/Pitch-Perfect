@@ -15,9 +15,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         recordInProcess.hidden = true
         stopButton.hidden = true
-        
     }
 
     override func didReceiveMemoryWarning() {
