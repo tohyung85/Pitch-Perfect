@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnc-QD-Imi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="I9f-Mn-dSs"/>
+                                </constraints>
+                                <state key="normal" image="microphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I9f-Mn-dSs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="I9f-Mn-dSs"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="blo-BO-e4f"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording in Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-GK-PmZ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="nQI-yb-IfQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nQI-yb-IfQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="nQI-yb-IfQ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="1sH-GK-PmZ" secondAttribute="centerX" id="bE5-gC-aFX"/>
+                            <constraint firstAttribute="centerY" secondItem="1sH-GK-PmZ" secondAttribute="centerY" constant="-99.5" id="tKY-3b-2tj"/>
+                            <constraint firstAttribute="centerY" secondItem="dnc-QD-Imi" secondAttribute="centerY" id="vor-at-pdM"/>
+                            <constraint firstAttribute="centerX" secondItem="dnc-QD-Imi" secondAttribute="centerX" id="xUS-Qc-PDU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dnc-QD-Imi"/>
+                                <exclude reference="1sH-GK-PmZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="bE5-gC-aFX"/>
+                                <exclude reference="tKY-3b-2tj"/>
+                                <exclude reference="vor-at-pdM"/>
+                                <exclude reference="xUS-Qc-PDU"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="dnc-QD-Imi"/>
+                                <include reference="1sH-GK-PmZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="bE5-gC-aFX"/>
+                                <include reference="tKY-3b-2tj"/>
+                                <include reference="vor-at-pdM"/>
+                                <include reference="xUS-Qc-PDU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="recordInProcess" destination="1sH-GK-PmZ" id="Doh-re-2YY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="346"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="microphone" width="100" height="100"/>
+    </resources>
+</document>
