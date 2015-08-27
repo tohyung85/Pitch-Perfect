@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a9F-is-Hfi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -214,14 +215,14 @@
                                 <exclude reference="eWZ-Rt-rEb"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="5xP-ih-oHA"/>
+                                <exclude reference="3J6-fn-0mK"/>
+                                <exclude reference="QnI-hL-NHM"/>
+                                <exclude reference="web-bu-osL"/>
                                 <exclude reference="8Yo-U5-Z1B"/>
                                 <exclude reference="Iiu-Xu-tb8"/>
                                 <exclude reference="cup-lf-a3u"/>
                                 <exclude reference="w0Z-mo-YjU"/>
-                                <exclude reference="QnI-hL-NHM"/>
-                                <exclude reference="web-bu-osL"/>
-                                <exclude reference="3J6-fn-0mK"/>
-                                <exclude reference="5xP-ih-oHA"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -231,14 +232,14 @@
                                 <include reference="eWZ-Rt-rEb"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="5xP-ih-oHA"/>
+                                <include reference="3J6-fn-0mK"/>
+                                <include reference="QnI-hL-NHM"/>
+                                <include reference="web-bu-osL"/>
                                 <include reference="8Yo-U5-Z1B"/>
                                 <include reference="Iiu-Xu-tb8"/>
                                 <exclude reference="cup-lf-a3u"/>
                                 <exclude reference="w0Z-mo-YjU"/>
-                                <include reference="QnI-hL-NHM"/>
-                                <include reference="web-bu-osL"/>
-                                <include reference="3J6-fn-0mK"/>
-                                <include reference="5xP-ih-oHA"/>
                             </mask>
                         </variation>
                     </view>
