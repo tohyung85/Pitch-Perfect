@@ -47,6 +47,11 @@ class PlaySoundsViewController: UIViewController {
         playAudio()
     }
     
+    @IBAction func playChipmunkSound(sender: UIButton) {
+        //chipmunk functionality
+        
+    }
+    
     @IBAction func stopPlaying(sender: UIButton) {
         audioPlayer.stop()
     }
