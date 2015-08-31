@@ -23,7 +23,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        recordInProcess.text = "Tap to Start Recording!"
         stopButton.hidden = true
     }
 

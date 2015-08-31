@@ -40,7 +40,7 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="blo-BO-e4f"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording in Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-GK-PmZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Start Recording!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sH-GK-PmZ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="nQI-yb-IfQ"/>
@@ -271,18 +271,18 @@
                                 <exclude reference="JhF-uV-F5P"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8Yo-U5-Z1B"/>
-                                <exclude reference="Iiu-Xu-tb8"/>
-                                <exclude reference="cup-lf-a3u"/>
-                                <exclude reference="w0Z-mo-YjU"/>
-                                <exclude reference="QnI-hL-NHM"/>
-                                <exclude reference="web-bu-osL"/>
+                                <exclude reference="5xP-ih-oHA"/>
+                                <exclude reference="3J6-fn-0mK"/>
                                 <exclude reference="J5F-7D-EvY"/>
                                 <exclude reference="N5x-EJ-5hf"/>
                                 <exclude reference="1au-B5-z8g"/>
                                 <exclude reference="jmj-tj-xp4"/>
-                                <exclude reference="3J6-fn-0mK"/>
-                                <exclude reference="5xP-ih-oHA"/>
+                                <exclude reference="QnI-hL-NHM"/>
+                                <exclude reference="web-bu-osL"/>
+                                <exclude reference="8Yo-U5-Z1B"/>
+                                <exclude reference="Iiu-Xu-tb8"/>
+                                <exclude reference="cup-lf-a3u"/>
+                                <exclude reference="w0Z-mo-YjU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -294,18 +294,18 @@
                                 <include reference="JhF-uV-F5P"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8Yo-U5-Z1B"/>
-                                <include reference="Iiu-Xu-tb8"/>
-                                <exclude reference="cup-lf-a3u"/>
-                                <exclude reference="w0Z-mo-YjU"/>
-                                <include reference="QnI-hL-NHM"/>
-                                <include reference="web-bu-osL"/>
+                                <include reference="5xP-ih-oHA"/>
+                                <include reference="3J6-fn-0mK"/>
                                 <include reference="J5F-7D-EvY"/>
                                 <include reference="N5x-EJ-5hf"/>
                                 <include reference="1au-B5-z8g"/>
                                 <include reference="jmj-tj-xp4"/>
-                                <include reference="3J6-fn-0mK"/>
-                                <include reference="5xP-ih-oHA"/>
+                                <include reference="QnI-hL-NHM"/>
+                                <include reference="web-bu-osL"/>
+                                <include reference="8Yo-U5-Z1B"/>
+                                <include reference="Iiu-Xu-tb8"/>
+                                <exclude reference="cup-lf-a3u"/>
+                                <exclude reference="w0Z-mo-YjU"/>
                             </mask>
                         </variation>
                     </view>
