@@ -15,6 +15,7 @@ class PlaySoundsViewController: UIViewController {
     
     var audioPlayer:AVAudioPlayer!
     var receivedAudio:RecordedAudio!
+    var audioEngine:AVAudioEngine!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class PlaySoundsViewController: UIViewController {
 //        } else {
 //            println("Invalid File Path")
 //        }
+        
+        audioEngine = AVAudioEngine()
         
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
         audioPlayer.enableRate = true
@@ -49,11 +52,31 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playChipmunkSound(sender: UIButton) {
         //chipmunk functionality
+        println("chipmunk button")
+        
+        audioEngine.stop()
+        
+        var playbackFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
+        
+        var pitchPlayer = AVAudioPlayerNode()
+        var timePitch = AVAudioUnitTimePitch()
+        timePitch.pitch = 1000
+        
+        audioEngine.attachNode(pitchPlayer)
+        audioEngine.attachNode(timePitch)
+        
+        audioEngine.connect(pitchPlayer, to: timePitch, format: playbackFile.processingFormat)
+        audioEngine.connect(timePitch, to: audioEngine.outputNode, format: playbackFile.processingFormat)
+        
+        pitchPlayer.scheduleFile(playbackFile, atTime: nil, completionHandler: nil)
+        audioEngine.startAndReturnError(nil)
+        pitchPlayer.play()
         
     }
     
     @IBAction func stopPlaying(sender: UIButton) {
         audioPlayer.stop()
+        audioEngine.stop()
     }
     
     func playAudio() {
