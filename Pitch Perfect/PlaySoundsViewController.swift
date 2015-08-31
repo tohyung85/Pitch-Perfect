@@ -51,16 +51,22 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playChipmunkSound(sender: UIButton) {
-        //chipmunk functionality
-        println("chipmunk button")
-        
+        playAudioWithVariablePitch(1000)
+    }
+    @IBAction func playDarthVaderSound(sender: AnyObject) {
+        playAudioWithVariablePitch(-1000)
+    }
+    
+    func playAudioWithVariablePitch (pitch: Float) {
+        audioPlayer.stop()
         audioEngine.stop()
+        audioEngine.reset()
         
         var playbackFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
         
         var pitchPlayer = AVAudioPlayerNode()
         var timePitch = AVAudioUnitTimePitch()
-        timePitch.pitch = 1000
+        timePitch.pitch = pitch
         
         audioEngine.attachNode(pitchPlayer)
         audioEngine.attachNode(timePitch)
@@ -71,7 +77,6 @@ class PlaySoundsViewController: UIViewController {
         pitchPlayer.scheduleFile(playbackFile, atTime: nil, completionHandler: nil)
         audioEngine.startAndReturnError(nil)
         pitchPlayer.play()
-        
     }
     
     @IBAction func stopPlaying(sender: UIButton) {
