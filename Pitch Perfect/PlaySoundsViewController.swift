@@ -20,15 +20,6 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-//        if var filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-//            var url = NSURL.fileURLWithPath(filePath)
-//            audioPlayer = AVAudioPlayer(contentsOfURL: url, error: nil)
-//            audioPlayer.enableRate = true
-//        } else {
-//            println("Invalid File Path")
-//        }
-        
         audioEngine = AVAudioEngine()
         
         audioPlayer = AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl, error: nil)
@@ -37,7 +28,6 @@ class PlaySoundsViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func playSlowSound(sender: UIButton) {
@@ -93,15 +83,5 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.stop()
         audioEngine.reset()
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
